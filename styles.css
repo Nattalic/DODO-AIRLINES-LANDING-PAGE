@@ -35,8 +35,9 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  margin-left: 300px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 50px;
   padding-bottom: 2rem;
 }
@@ -68,26 +69,36 @@ nav img {
   border-radius: 50%;
 }
 
+/* HERO LAYOUT INTERNO: texto a la izquierda e imágenes a la derecha */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 80px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  gap: 60px;
+}
+
 /* Texto del hero */
 .hero-text {
-width: 720px;
-margin-top: 100px;
-  margin-left: 300px;
+margin-right: 600px;
+  flex: 1;
   color: white;
 }
 
 .hero-text h1 {
   font-size: 60px;
-
 }
 
 .hero-text p {
   margin-top: 2.5rem;
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 30px;
+  font-weight:lighter;
 }
 
-
+/* Formulario de búsqueda de vuelos */
 .form-section {
   display: flex;
   flex-direction: column;
@@ -96,9 +107,8 @@ margin-top: 100px;
 }
 
 .form-box {
-margin-top: 20px;
-height: 100px;
-
+  margin-top: 20px;
+  height: 100px;
   background: white;
   color: black;
   border-radius: 10px;
@@ -108,11 +118,12 @@ height: 100px;
   gap: 0rem;
   align-items: flex-start;
   position: relative;
+  width: 800px;
 }
 
 .form-box.route-box {
- 
-  gap: 220px;
+  gap: 260px;
+  width: 800px;
 }
 
 .form-box.route-box .plane-icon {
@@ -121,7 +132,7 @@ height: 100px;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.05;
-  width: 100px;
+
   pointer-events: none;
 }
 
@@ -151,4 +162,17 @@ height: 100px;
   border-radius: 10px;
   cursor: pointer;
   align-self: flex-end;
+}
+
+/* Sección de imágenes de los dodos */
+.dodo-characters {
+  position: absolute;
+  top: 200px;
+  right: 100px;
+  z-index: 5;
+}
+
+.dodo-characters img {
+  width: 660px;
+  height: auto;
 }
