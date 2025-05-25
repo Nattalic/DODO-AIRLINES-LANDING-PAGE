@@ -1,17 +1,24 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body{
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-family: 'Fredoka', sans-serif;
+    background: #ffffff;
+  color: white;
+
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  font-family: 'Fredoka', sans-serif;
-  overflow-x: hidden;
-  background: #ffffff;
-  color: white;
+
+
+.general{
+
+    margin: 40px auto; 
+    margin-bottom: 0;
+    max-width: 1200px; 
+    padding: 0 20px;
+    z-index: 10;
 }
 
 /* HERO con fondo completo y layout interno */
