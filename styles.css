@@ -16,7 +16,7 @@ html, body {
 
 /* HERO con fondo completo y layout interno */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-image: url('./images/Rectangle 1.png');
   background-size: cover;
@@ -24,8 +24,7 @@ html, body {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 2rem;
+  padding: 2rem 1rem;
   position: relative;
 }
 
@@ -36,9 +35,7 @@ header {
   align-items: center;
   width: 100%;
   max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+  margin-left: 90px;
   padding-bottom: 2rem;
 }
 
@@ -55,7 +52,9 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
+  margin-right: 200px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -69,33 +68,41 @@ nav img {
   border-radius: 50%;
 }
 
-/* HERO LAYOUT INTERNO: texto a la izquierda e imágenes a la derecha */
+/* HERO LAYOUT INTERNO */
 .hero-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 80px;
-  max-width: 1500px;
+  flex-direction: column-reverse;
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  gap: 60px;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
 }
 
 /* Texto del hero */
 .hero-text {
-margin-right: 600px;
   flex: 1;
+  margin-right: 500px;
   color: white;
+  margin-top: 40px;
 }
 
 .hero-text h1 {
-  font-size: 60px;
+  font-size: 2.5rem;
 }
 
 .hero-text p {
-  margin-top: 2.5rem;
-  font-size: 30px;
-  font-weight:lighter;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: lighter;
 }
 
 /* Formulario de búsqueda de vuelos */
@@ -107,23 +114,21 @@ margin-right: 600px;
 }
 
 .form-box {
-  margin-top: 20px;
-  height: 100px;
   background: white;
   color: black;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0rem;
+  gap: 1rem;
   align-items: flex-start;
   position: relative;
-  width: 800px;
+  width: 100%;
+  max-width: 600px;
 }
 
 .form-box.route-box {
-  gap: 260px;
-  width: 800px;
+  gap: 2rem;
 }
 
 .form-box.route-box .plane-icon {
@@ -132,14 +137,13 @@ margin-right: 600px;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.05;
-
   pointer-events: none;
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1 1 120px;
   min-width: 100px;
 }
 
@@ -166,13 +170,24 @@ margin-right: 600px;
 
 /* Sección de imágenes de los dodos */
 .dodo-characters {
-  position: absolute;
-  top: 200px;
-  right: 100px;
-  z-index: 5;
+  position: relative;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .dodo-characters img {
-  width: 660px;
+  max-width: 90%;
   height: auto;
+}
+
+@media (min-width: 768px) {
+  .dodo-characters {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+  }
+
+  .dodo-characters img {
+    width: 700px;
+  }
 }
