@@ -240,14 +240,19 @@ nav img {
 }
 
 .field label {
+  font-family: libre Franklin, sans-serif;
+  font-weight: normal;
   font-size: 0.75rem;
-  color: gray;
+  color: rgb(196, 196, 196);
   margin-bottom: 0.25rem;
 }
 
 .field span {
+  color: #194C5D;
   font-weight: 600;
   font-size: 1.25rem;
+  font-family: libre Franklin, sans-serif;
+  font-weight:700;
 }
 
 .form-box button {
@@ -274,9 +279,9 @@ nav img {
   margin-top: 2rem;
   background-color: #ffe25f; /* amarillo pastel */
   color: #4a3b1a; /* marrón oscuro para el texto */
-  font-weight: bold;
+  font-weight:700;
   font-size: 1.3rem;
-  font-family: 'Fredoka', sans-serif;
+  font-family: zilla slab, serif;
   border: none;
   padding: 1rem 2.5rem;
   cursor: pointer;
