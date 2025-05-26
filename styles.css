@@ -2,6 +2,7 @@ body{
     margin-left: 0px;
     margin-right: 2px;
     margin-bottom: 0px;
+    margin-top: 0px;
     background-repeat: no-repeat;
     overflow-x: hidden;
     font-family: 'Fredoka', sans-serif;
@@ -9,6 +10,41 @@ body{
   color: white;
 
 }
+
+.background {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./images/Group\ 93\ \(1\).png');
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.scrolling-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./images/Group\ 95.png'); /* tu imagen */
+  background-repeat: repeat-x;
+  background-size: cover; /* o "contain" si prefieres no recortar */
+  animation: scrollBackground 15s linear infinite;
+  z-index: -1;
+}
+
+@keyframes scrollBackground {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -100vw;
+  }
+}
+
 
 
 
@@ -21,57 +57,79 @@ body{
     z-index: 10;
 }
 
-/* HERO con fondo completo y layout interno */
-.hero {
-  min-height: 100vh;
-  width: 100%;
-  background-image: url('./images/Rectangle 1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 1rem;
-  position: relative;
-}
+
 
 /* Header dentro del hero */
+section.hero {
+  position:realtive;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1500px;
-  margin-left: 90px;
-  padding-bottom: 2rem;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
 
 .logo img {
-  height: 40px;
+  height: 70px;
 }
 
 nav {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-right: 200px;
+  gap: 50px;
+  margin-right: 10px;
   flex-wrap: wrap;
+  font-family: libre Franklin, sans-serif;
+  font-weight: 500;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 100;
+  font-size: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 18px;
+  transition: transform 0.6s ease, color 0.6s ease; /* aquí el smooth */
+  position: relative; /* necesario para el ::after */
+}
+
+/* Línea suave debajo */
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #ffe66d; 
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s ease-in-out;
+  border-radius: 2px;
+}
+
+/* Hover con luz + aumento + cambio de color */
+nav a:hover {
+  transform: scale(1.5);
+  color: #ffe66d;
+  text-shadow: 0 0 8px #ffe66d, 0 0 16px #fff3b0;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
 }
 
 nav img {
-  height: 40px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -103,13 +161,20 @@ nav img {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  margin-bottom:40px;
+  margin-top: 0px;
+  font-size: 3rem;
+  font-family: zilla slab, serif;
+  font-weight: 700;
 }
 
 .hero-text p {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
+  margin-bottom:70px;
+  margin-top: 0;
+  font-size: 1.5rem;
   font-weight: lighter;
+  font-family: libre Franklin, sans-serif;
+  font-weight: normal;
 }
 
 /* Formulario de búsqueda de vuelos */
@@ -131,20 +196,40 @@ nav img {
   align-items: flex-start;
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 620px;
 }
 
+
+
 .form-box.route-box {
-  gap: 2rem;
+  gap: 14rem;
 }
 
 .form-box.route-box .plane-icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.05;
+  width: 133px;
+  opacity: 0.7;
   pointer-events: none;
+  z-index: 0; /* Asegura que quede detrás */
+  animation: flyHorizontal 7s infinite;
+}
+
+@keyframes flyHorizontal {
+  0% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+
+.form-box.route-box > .field {
+  position: relative;
+  z-index: 1; /* Que los campos queden encima */
 }
 
 .field {
@@ -175,6 +260,69 @@ nav img {
   align-self: flex-end;
 }
 
+.plane-icon {
+  left: 50%;
+  top: 1px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+
+/*boton lets fly*/
+.ac-button {
+  position: relative;
+  margin-top: 2rem;
+  background-color: #ffe25f; /* amarillo pastel */
+  color: #4a3b1a; /* marrón oscuro para el texto */
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: 'Fredoka', sans-serif;
+  border: none;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+
+  /* Bordes más orgánicos, tipo parche */
+  border-radius: 100px;
+
+  /* Transición general */
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Fondo animado que aparece al hacer hover */
+.ac-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #fff07d;
+  border-radius: inherit;
+  z-index: -1;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.ac-button:hover::before {
+  transform: scale(1);
+}
+
+/* Efecto de levantar un poco el botón */
+.ac-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 0 #cba938, 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Flecha animada */
+.ac-button .arrow {
+  transition: transform 0.3s ease;
+}
+
+.ac-button:hover .arrow {
+  transform: translateX(6px) rotate(10deg);
+}
 /* Sección de imágenes de los dodos */
 .dodo-characters {
   position: relative;
@@ -188,13 +336,39 @@ nav img {
 }
 
 @media (min-width: 768px) {
+  .banner {
+    position: absolute;
+    top: 30px;
+    right: 70x;
+  }
+}
+
+
+@media (min-width: 768px) {
   .dodo-characters {
     position: absolute;
-    top: 120px;
-    right: 20px;
+    top:80px;
+    right: -200px;
   }
 
   .dodo-characters img {
     width: 700px;
   }
+}
+
+.dodo-characters img {
+  width: 700px;
+  transition: transform 0.3s ease;
+}
+
+.dodo-characters img:hover {
+  animation: bounce 0.9s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.1) translateY(-10px); }
+  50%  { transform: scale(0.95) translateY(4px); }
+  70%  { transform: scale(1.05) translateY(-6px); }
+  100% { transform: scale(1) translateY(0); }
 }
