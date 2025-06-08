@@ -1,0 +1,43 @@
+const scenes = [
+  './images/lol (2).png',
+  './images/lol (4).png',
+  './images/lol (3).png',
+  './images/lol (5).png'
+];
+
+let currentIndex = 0;
+
+// Cargar la primera imagen correctamente al cargar la página
+window.onload = () => {
+  document.getElementById('scene-image').src = scenes[currentIndex];
+};
+
+async function changeScene(direction) {
+  const img = document.getElementById('scene-image');
+
+  // Quitar animaciones previas
+  img.classList.remove('fade-in', 'fade-out');
+  img.classList.add('fade-out');
+
+  // Esperar la salida
+  await new Promise(resolve => setTimeout(resolve, 400));
+
+  // Cambiar índice con bucle circular
+  currentIndex += direction;
+
+  if (currentIndex < 0) {
+    currentIndex = scenes.length - 1;
+  }
+
+  if (currentIndex >= scenes.length) {
+    currentIndex = 0;
+  }
+
+  // Actualizar imagen
+  img.src = scenes[currentIndex];
+
+  // Aplicar animación de entrada
+  img.classList.remove('fade-out');
+  img.classList.add('fade-in');
+}
+

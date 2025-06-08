@@ -7,6 +7,7 @@
   <title>Dodo Airlines</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="./images/favicon.ico">
   <link
     href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Calligraffitti&family=Kumbh+Sans:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet">
@@ -25,9 +26,13 @@
   <div class="background"></div>
   <div class="scrolling-background"></div>
 
-  <div class="general ">
-    <div class=" banner">
 
+  <!--DIV GENERAL-------------------------------------------------------------------------->
+  <div class="general ">
+
+
+    <!--BANNER-------------------------------------------------------------------------->
+    <div class="banner">
       <header>
         <div class="logo">
           <img src="./images/DodoAirlines_2020 1.png" alt="Dodo Logo" />
@@ -75,8 +80,8 @@
           </div>
 
           <button class="ac-button">
-  Let’s fly <span class="arrow">❯</span>
-</button>
+            Let’s fly <span class="arrow1">❯</span>
+          </button>
 
         </div>
 
@@ -84,9 +89,43 @@
         <div class="dodo-characters">
           <img src="./images/Group 92.png" alt="Dodo 1" />
         </div>
+      </div>
+    </div>
+
+    <!--FIN DEL BANNER-------------------------------------------------------------------------->
+
+    <!--MENSAJE WELCOME-------------------------------------------------------------------------->
+
+    <div class="strip-container">
+      <img src="./images/Group 411.png" alt="Cartel centrado" class="centered-banner" />
+    </div>
+
+    <!--FIN MENSAJE WELCOME-------------------------------------------------------------------------->
+
+    <!--IMAGENES ISLAS-------------------------------------------------------------------------->
+
+    <div class="island-container">
+      <!-- Carrusel -->
+      <div class="island-slider">
+        <img id="scene-image" src="./images/lol (2).png" alt="Island Scene" />
+        <button class="arrow left" onclick="changeScene(-1)">❮</button>
+        <button class="arrow right" onclick="changeScene(1)">❯</button>
+      </div>
+
+      <!-- Personajes fuera del carrusel -->
+      <img src="./images/Group 100.png" class="character tom-nook" alt="Tom Nook">
+      <img src="./images/Group 101 (1).png" class="character aldeana" alt="Aldeana">
+    </div>
+
+    <!--FIN IMAGENES ISLAS-------------------------------------------------------------------------->
+
+    
 
 
+  </div>
 
+
+  <script src="script.js"></script>
 </body>
 
 </html>

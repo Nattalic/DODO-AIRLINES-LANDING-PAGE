@@ -11,6 +11,16 @@ body{
 
 }
 
+.background-base {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("./images/Group\ 102\ \(1\).png");
+  z-index: -3;
+}
+
 .background {
   position: relative;
   top: 0;
@@ -321,11 +331,11 @@ nav img {
 }
 
 /* Flecha animada */
-.ac-button .arrow {
+.ac-button .arrow1 {
   transition: transform 0.3s ease;
 }
 
-.ac-button:hover .arrow {
+.ac-button:hover .arrow1 {
   transform: translateX(6px) rotate(10deg);
 }
 /* Sección de imágenes de los dodos */
@@ -376,4 +386,147 @@ nav img {
   50%  { transform: scale(0.95) translateY(4px); }
   70%  { transform: scale(1.05) translateY(-6px); }
   100% { transform: scale(1) translateY(0); }
+}
+
+
+.centered-banner {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -250%);
+  max-width: 45%;
+  transition: transform 0.4s ease, filter 0.4s ease; /* suave transición */
+}
+
+/* Efecto al pasar el mouse */
+.centered-banner:hover {
+  transform: translate(-50%, -250%) scale(1.07);
+  filter: drop-shadow(0 4px 6px rgba(29, 187, 255, 0.3));
+}
+
+
+.island-slider {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.island-slider img {
+  width: 120%;
+  height: auto; /* Mantiene la proporción */
+  max-height: 1000px; /* evita que se pase de alto */
+  object-fit: contain; /* evita estiramiento raro */
+  margin-top: 200px;
+  display: block;
+}
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* Hover para ambas flechas */
+.arrow:hover {
+  transform: translateY(-50%) scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.1);
+}
+
+/* Movimiento direccional al hover */
+.arrow.left:hover {
+  transform: translate(-10%, -50%) scale(1.15);
+}
+
+.arrow.right:hover {
+  transform: translate(10%, -50%) scale(1.15);
+}
+
+/* Posiciones normales */
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 3px;
+}
+
+
+/* Clase para transición de entrada suave */
+.fade-in {
+  animation: fadeInSmooth 0.5s ease-out forwards;
+}
+
+/* Clase para transición de salida suave */
+.fade-out {
+  animation: fadeOutSmooth 0.3s ease-in forwards;
+}
+
+@keyframes fadeInSmooth {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeOutSmooth {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+  }
+}
+
+.island-container {
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.character {
+  position: absolute;
+  z-index: 10;
+  max-width: 200px;
+}
+
+/* 🎉 Animación BOUNCE en hover */
+.character:hover {
+  animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-20px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Posiciones específicas */
+.tom-nook {
+  bottom: 100px;
+  left: 80px; /* ajústalo según tu diseño */
+}
+
+.aldeana {
+  bottom: 70px;
+  right: 250px; /* ajústalo también */
 }
