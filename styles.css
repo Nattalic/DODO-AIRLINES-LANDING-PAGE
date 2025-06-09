@@ -1623,7 +1623,7 @@ nav img {
 
 .moving-clouds-section {
   position: relative;
-  height: 2000px; /* Ajusta según necesites */
+  height: 1340px; /* Ajusta según necesites */
   overflow: hidden;
   z-index: 1;
 }
@@ -1640,8 +1640,8 @@ nav img {
 
 .moving-clouds {
   position: absolute;
-  width: 160%;
-  height: 100%;
+  width: 150%;
+  height: 80%;
   background: url('./images/Group 111.png') repeat-x;
   background-size: cover;
   animation: cloudsMove 15s linear infinite;
@@ -1724,4 +1724,34 @@ nav img {
   margin-top: 2rem;
   font-size: 0.9rem;
   color: #6a6a6a;
+}
+
+.dock-illustration {
+  position: relative;
+  margin-top: 3rem;
+  text-align: center;
+  z-index: 5;
+  animation: riseUp 2s ease-out;
+}
+
+.dock-illustration img {
+  width: 100%;
+  max-width: 3000px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.dock-illustration:hover img {
+  transform: scale(1.03) translateY(-5px);
+}
+
+@keyframes riseUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
