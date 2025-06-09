@@ -434,7 +434,7 @@ nav img {
 .centered-banner {
   position: absolute;
   left: 51%;
-  transform: translate(-50%, -220%);
+  transform: translate(-50%, -240%);
   max-width: 45%;
   transition: transform 0.4s ease, filter 0.4s ease;
   /* suave transición */
