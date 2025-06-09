@@ -41,3 +41,22 @@ async function changeScene(direction) {
   img.classList.add('fade-in');
 }
 
+
+
+
+const stack = document.getElementById('photoStack');
+
+stack.addEventListener('click', () => {
+  const photos = stack.querySelectorAll('.photo');
+  const top = photos[photos.length - 1];
+
+  top.classList.add('bounce');
+
+  setTimeout(() => {
+    top.classList.remove('bounce');
+    stack.prepend(top);
+    stack.querySelectorAll('.photo').forEach((photo, index) => {
+      photo.style.zIndex = index + 1;
+    });
+  }, 500);
+});
