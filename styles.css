@@ -1369,8 +1369,8 @@ nav img {
 }
 
 .testimonial-heading img {
-  max-width: 2000px;
-  margin-left: -400px;
+  max-width: 1900px;
+  margin-left: -310px;
   display: inline-block;
   animation: triangle-wave 4s ease-in-out infinite;
   transform-origin: center;
