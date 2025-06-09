@@ -58,5 +58,16 @@ stack.addEventListener('click', () => {
     stack.querySelectorAll('.photo').forEach((photo, index) => {
       photo.style.zIndex = index + 1;
     });
-  }, 500);
+  }, 10);
+});
+
+
+document.querySelector(".letter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const msg = document.querySelector(".letter-sent-msg");
+  msg.style.display = "block";
+  setTimeout(() => {
+    msg.style.display = "none";
+    this.reset();
+  }, 3000);
 });

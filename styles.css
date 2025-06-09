@@ -1,12 +1,12 @@
-body{
-    margin-left: 0px;
-    margin-right: 2px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    font-family: 'Fredoka', sans-serif;
-    background: #ffffff;
+body {
+  margin-left: 0px;
+  margin-right: 2px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  font-family: 'Fredoka', sans-serif;
+  background: #ffffff;
   color: white;
 
 }
@@ -40,9 +40,11 @@ body{
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('./images/Group\ 95.png'); /* tu imagen */
+  background-image: url('./images/Group\ 95.png');
+  /* tu imagen */
   background-repeat: repeat-x;
-  background-size: cover; /* o "contain" si prefieres no recortar */
+  background-size: cover;
+  /* o "contain" si prefieres no recortar */
   animation: scrollBackground 15s linear infinite;
   z-index: -1;
 }
@@ -51,6 +53,7 @@ body{
   from {
     background-position-x: 0;
   }
+
   to {
     background-position-x: -100vw;
   }
@@ -59,20 +62,20 @@ body{
 
 
 
-.general{
+.general {
 
-    margin: 40px auto; 
-    margin-bottom: 0;
-    max-width: 1200px; 
-    padding: 0 20px;
-    z-index: 10;
+  margin: 40px auto;
+  margin-bottom: 0;
+  max-width: 1200px;
+  padding: 0 20px;
+  z-index: 10;
 }
 
 
 
 /* Header dentro del hero */
 section.hero {
-  position:realtive;
+  position: realtive;
 }
 
 header {
@@ -109,8 +112,10 @@ nav a {
   text-decoration: none;
   font-weight: 100;
   font-size: 18px;
-  transition: transform 0.6s ease, color 0.6s ease; /* aquí el smooth */
-  position: relative; /* necesario para el ::after */
+  transition: transform 0.6s ease, color 0.6s ease;
+  /* aquí el smooth */
+  position: relative;
+  /* necesario para el ::after */
 }
 
 /* Línea suave debajo */
@@ -121,7 +126,7 @@ nav a::after {
   bottom: 0;
   height: 1px;
   width: 100%;
-  background-color: #ffe66d; 
+  background-color: #ffe66d;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.9s ease-in-out;
@@ -172,7 +177,7 @@ nav img {
 }
 
 .hero-text h1 {
-  margin-bottom:40px;
+  margin-bottom: 40px;
   margin-top: 0px;
   font-size: 3rem;
   font-family: zilla slab, serif;
@@ -180,7 +185,7 @@ nav img {
 }
 
 .hero-text p {
-  margin-bottom:70px;
+  margin-bottom: 70px;
   margin-top: 0;
   font-size: 1.5rem;
   font-weight: lighter;
@@ -221,7 +226,8 @@ nav img {
   width: 133px;
   opacity: 0.7;
   pointer-events: none;
-  z-index: 0; /* Asegura que quede detrás */
+  z-index: 0;
+  /* Asegura que quede detrás */
   animation: flyHorizontal 7s infinite;
 }
 
@@ -229,18 +235,21 @@ nav img {
   0% {
     transform: translateX(-200px);
   }
+
   50% {
     transform: translateX(200px);
   }
+
   100% {
     transform: translateX(-200px);
   }
 }
 
 
-.form-box.route-box > .field {
+.form-box.route-box>.field {
   position: relative;
-  z-index: 1; /* Que los campos queden encima */
+  z-index: 1;
+  /* Que los campos queden encima */
 }
 
 .field {
@@ -263,7 +272,7 @@ nav img {
   font-weight: 600;
   font-size: 1.25rem;
   font-family: libre Franklin, sans-serif;
-  font-weight:700;
+  font-weight: 700;
 }
 
 .form-box button {
@@ -288,9 +297,11 @@ nav img {
 .ac-button {
   position: relative;
   margin-top: 2rem;
-  background-color: #ffe25f; /* amarillo pastel */
-  color: #4a3b1a; /* marrón oscuro para el texto */
-  font-weight:700;
+  background-color: #ffe25f;
+  /* amarillo pastel */
+  color: #4a3b1a;
+  /* marrón oscuro para el texto */
+  font-weight: 700;
   font-size: 1.3rem;
   font-family: zilla slab, serif;
   border: none;
@@ -339,6 +350,7 @@ nav img {
 .ac-button:hover .arrow1 {
   transform: translateX(6px) rotate(10deg);
 }
+
 /* Sección de imágenes de los dodos */
 .dodo-characters {
   position: relative;
@@ -363,7 +375,7 @@ nav img {
 @media (min-width: 768px) {
   .dodo-characters {
     position: absolute;
-    top:80px;
+    top: 80px;
     right: -200px;
   }
 
@@ -382,11 +394,25 @@ nav img {
 }
 
 @keyframes bounce {
-  0%   { transform: scale(1); }
-  30%  { transform: scale(1.1) translateY(-10px); }
-  50%  { transform: scale(0.95) translateY(4px); }
-  70%  { transform: scale(1.05) translateY(-6px); }
-  100% { transform: scale(1) translateY(0); }
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.1) translateY(-10px);
+  }
+
+  50% {
+    transform: scale(0.95) translateY(4px);
+  }
+
+  70% {
+    transform: scale(1.05) translateY(-6px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
+  }
 }
 
 
@@ -395,7 +421,8 @@ nav img {
   left: 51%;
   transform: translate(-50%, -250%);
   max-width: 45%;
-  transition: transform 0.4s ease, filter 0.4s ease; /* suave transición */
+  transition: transform 0.4s ease, filter 0.4s ease;
+  /* suave transición */
 }
 
 /* Efecto al pasar el mouse */
@@ -413,9 +440,12 @@ nav img {
 
 .island-slider img {
   width: 120%;
-  height: auto; /* Mantiene la proporción */
-  max-height: 1000px; /* evita que se pase de alto */
-  object-fit: contain; /* evita estiramiento raro */
+  height: auto;
+  /* Mantiene la proporción */
+  max-height: 1000px;
+  /* evita que se pase de alto */
+  object-fit: contain;
+  /* evita estiramiento raro */
   margin-top: 200px;
   display: block;
 }
@@ -431,8 +461,8 @@ nav img {
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 50%;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  transition: 
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition:
     transform 0.3s ease,
     box-shadow 0.3s ease,
     filter 0.3s ease;
@@ -479,6 +509,7 @@ nav img {
     opacity: 0;
     transform: translateY(10px) scale(0.98);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -490,6 +521,7 @@ nav img {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+
   100% {
     opacity: 0;
     transform: translateY(-10px) scale(0.98);
@@ -510,26 +542,44 @@ nav img {
 
 
 @keyframes bounce {
-  0%   { transform: translateY(0); }
-  30%  { transform: translateY(-20px); }
-  50%  { transform: translateY(0); }
-  70%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Posiciones específicas */
 .tom-nook {
   bottom: 100px;
-  left: 80px; /* ajústalo según tu diseño */
-    animation: bounce-fun 4s ease-in-out infinite;
-  animation-delay: 0.5s; /* hace que rebote desfasado respecto al personaje */
+  left: 80px;
+  /* ajústalo según tu diseño */
+  animation: bounce-fun 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+  /* hace que rebote desfasado respecto al personaje */
 }
 
 .aldeana {
   bottom: 70px;
-  right: 250px; /* ajústalo también */
-    animation: bounce-fun 4s ease-in-out infinite;
-  animation-delay: 0.5s; /* hace que rebote desfasado respecto al personaje */
+  right: 250px;
+  /* ajústalo también */
+  animation: bounce-fun 4s ease-in-out infinite;
+  animation-delay: 0.5s;
+  /* hace que rebote desfasado respecto al personaje */
 }
 
 
@@ -538,7 +588,8 @@ nav img {
   width: 100%;
   text-align: center;
   background: transparent;
-  margin-bottom: -2rem; /* solapa un poquito */
+  margin-bottom: -2rem;
+  /* solapa un poquito */
   z-index: 5;
   position: relative;
 }
@@ -552,8 +603,15 @@ nav img {
 
 /* Animación suave */
 @keyframes banner-wave {
-  0%, 100% { transform: rotate(0deg) translateY(0); }
-  50%      { transform: rotate(1deg) translateY(2px); }
+
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(1deg) translateY(2px);
+  }
 }
 
 
@@ -562,7 +620,8 @@ nav img {
 .fishing-tour {
 
   position: relative;
-  background-image: url('./images/bg-pattern.png'); /* si tienes el patrón de hojas */
+  background-image: url('./images/bg-pattern.png');
+  /* si tienes el patrón de hojas */
   background-repeat: repeat;
 }
 
@@ -575,7 +634,8 @@ nav img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; /* hace que el botón baje en móviles */
+  flex-wrap: wrap;
+  /* hace que el botón baje en móviles */
   gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -604,10 +664,12 @@ nav img {
     transform: scale(0);
     opacity: 0.7;
   }
+
   80% {
     transform: scale(4);
     opacity: 0.15;
   }
+
   100% {
     transform: scale(5);
     opacity: 0;
@@ -668,8 +730,15 @@ nav img {
 }
 
 @keyframes fisherman-float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50%      { transform: translateY(-8px) rotate(-1deg); }
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(-1deg);
+  }
 }
 
 @keyframes fisherman-entrance {
@@ -677,6 +746,7 @@ nav img {
     opacity: 0;
     transform: translateY(40px) scale(0.95) rotate(-2deg);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0) scale(1) rotate(0deg);
@@ -684,10 +754,21 @@ nav img {
 }
 
 @keyframes fisherman-hover-bounce {
-  0%   { transform: translateY(0) scale(1); }
-  40%  { transform: translateY(-10px) scale(1.05) rotate(-2deg); }
-  70%  { transform: translateY(2px) scale(0.98) rotate(1deg); }
-  100% { transform: translateY(0) scale(1) rotate(0deg); }
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  40% {
+    transform: translateY(-10px) scale(1.05) rotate(-2deg);
+  }
+
+  70% {
+    transform: translateY(2px) scale(0.98) rotate(1deg);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
 }
 
 @keyframes bubble-rise {
@@ -695,9 +776,11 @@ nav img {
     transform: translateY(20px) scale(0.2);
     opacity: 0;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     transform: translateY(-80px) scale(1);
     opacity: 0;
@@ -712,8 +795,8 @@ nav img {
 .fisherman img {
   display: block;
   max-width: 650px;
-  animation: 
-             fisherman-float 4s ease-in-out infinite;
+  animation:
+    fisherman-float 4s ease-in-out infinite;
   transform-origin: bottom center;
   transition: filter 0.3s ease;
   z-index: 2;
@@ -736,7 +819,8 @@ nav img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: rgba(173, 216, 230, 0.7); /* azul burbuja */
+  background: rgba(173, 216, 230, 0.7);
+  /* azul burbuja */
   animation: bubble-rise 4s ease-in-out infinite;
   z-index: 1;
 }
@@ -748,16 +832,35 @@ nav img {
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes pop {
-  0% { transform: scale(1); }
-  40% { transform: scale(1.15); }
-  60% { transform: scale(0.95); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.15);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .fish-cards {
@@ -779,10 +882,21 @@ nav img {
 }
 
 @keyframes squishy-pop {
-  0%   { transform: scale(1) rotate(0deg); }
-  30%  { transform: scale(1.06) rotate(-1deg); }
-  60%  { transform: scale(1.03) rotate(0.5deg); }
-  100% { transform: scale(1.05) rotate(0deg); }
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  30% {
+    transform: scale(1.06) rotate(-1deg);
+  }
+
+  60% {
+    transform: scale(1.03) rotate(0.5deg);
+  }
+
+  100% {
+    transform: scale(1.05) rotate(0deg);
+  }
 }
 
 .fish-card {
@@ -793,7 +907,7 @@ nav img {
 .fish-card:hover {
   animation: squishy-pop 0.4s ease forwards;
   box-shadow: 0 10px 24px rgba(255, 200, 120, 0.3),
-              0 0 0 3px rgba(255, 236, 180, 0.25);
+    0 0 0 3px rgba(255, 236, 180, 0.25);
 }
 
 
@@ -869,8 +983,13 @@ nav img {
 }
 
 @keyframes clouds-scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 /* Contenido encima */
@@ -884,13 +1003,15 @@ nav img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 0; /* asegúrate de que el contenedor esté por debajo del contenido */
+  z-index: 0;
+  /* asegúrate de que el contenedor esté por debajo del contenido */
 }
 
 
 .sky-content {
   position: relative;
-  z-index: 2; /* debe estar por encima de las nubes */
+  z-index: 2;
+  /* debe estar por encima de las nubes */
   color: white;
   font-family: zilla slab, serif;
   text-align: center;
@@ -916,16 +1037,37 @@ nav img {
 }
 
 @keyframes bounce-fun {
-  0%   { transform: translateY(0); }
-  30%  { transform: translateY(-15px); }
-  50%  { transform: translateY(5px); }
-  70%  { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-15px);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  70% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .character-side img,
@@ -985,34 +1127,67 @@ nav img {
 }
 
 @keyframes banner-wave {
-  0%, 100% { transform: rotate(0deg) translateY(0); }
-  50%      { transform: rotate(1deg) translateY(2px); }
+
+  0%,
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(1deg) translateY(2px);
+  }
 }
 
 
 
 @keyframes moveTriangles {
-  from { background-position-x: 0; }
-  to   { background-position-x: -100%; }
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -100%;
+  }
 }
+
 @keyframes moveTriangles {
-  from { background-position-x: 0; }
-  to { background-position-x: -100%; }
+  from {
+    background-position-x: 0;
+  }
+
+  to {
+    background-position-x: -100%;
+  }
 }
 
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .photo-stack-wrapper {
-  margin-top: -100px; /* Ajusta según sea necesario */
+  margin-top: -100px;
+  /* Ajusta según sea necesario */
   display: flex;
   justify-content: center;
   position: relative;
@@ -1045,19 +1220,41 @@ nav img {
   transition: transform 0.6s ease, z-index 0.3s ease;
 }
 
-.photo:nth-child(1) { transform: translate(-50%, -50%) rotate(-4deg); z-index: 1; }
-.photo:nth-child(2) { transform: translate(-50%, -50%) rotate(4deg); z-index: 2; }
-.photo:nth-child(3) { transform: translate(-50%, -50%) rotate(0deg); z-index: 3; }
+.photo:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-4deg);
+  z-index: 1;
+}
+
+.photo:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(4deg);
+  z-index: 2;
+}
+
+.photo:nth-child(3) {
+  transform: translate(-50%, -50%) rotate(0deg);
+  z-index: 3;
+}
 
 .photo.bounce {
   animation: bounce-out 0.5s ease;
 }
 
 @keyframes bounce-out {
-  0%   { transform: translate(-50%, -50%) scale(1); }
-  30%  { transform: translate(-50%, -60%) scale(1.05); }
-  60%  { transform: translate(-50%, -40%) scale(0.98); }
-  100% { transform: translate(-50%, -50%) scale(1); }
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  30% {
+    transform: translate(-50%, -60%) scale(1.05);
+  }
+
+  60% {
+    transform: translate(-50%, -40%) scale(0.98);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 
@@ -1081,17 +1278,15 @@ nav img {
 .scene-decor {
   position: relative;
   width: 100%;
-  margin-top: -60px; /* Puedes ajustar si está muy abajo o arriba */
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 2rem;
-  height: 280px;
+  height: 0;
+  /* <- ya no reserva espacio */
+  margin-top: -80px;
+  /* solo si necesitas solapar ligeramente */
   z-index: 5;
 }
 
 .decor-tree {
- position: absolute;
+  position: absolute;
   right: 38%;
   top: -605px;
   width: 400px;
@@ -1101,8 +1296,15 @@ nav img {
 }
 
 @keyframes tree-bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .decor-butterfly {
@@ -1115,9 +1317,295 @@ nav img {
 }
 
 @keyframes fly-loop {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  25%  { transform: translate(30px, -20px) rotate(10deg); }
-  50%  { transform: translate(0px, -40px) rotate(-5deg); }
-  75%  { transform: translate(-20px, -20px) rotate(10deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(30px, -20px) rotate(10deg);
+  }
+
+  50% {
+    transform: translate(0px, -40px) rotate(-5deg);
+  }
+
+  75% {
+    transform: translate(-20px, -20px) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
+
+.testimonial-heading {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+  font-family: 'Zilla Slab', serif;
+  color: #5c3613;
+  z-index: 50;
+}
+
+.testimonial-heading h2 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 20px;
+}
+
+.testimonial-heading img {
+  max-width: 1700px;
+  margin-left: -80px;
+  display: inline-block;
+  animation: triangle-wave 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Nueva animación */
+@keyframes triangle-wave {
+  25% {
+    transform: rotate(-2deg) scale(1.05);
+  }
+
+  50% {
+    transform: rotate(2deg) scale(1.09);
+  }
+
+  75% {
+    transform: rotate(-1deg) scale(1.00);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.testimonial-banner {
+  margin-top: 60px;
+  margin-left: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-up 1s ease-out;
+}
+
+.testimonial-banner img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+/* animación de entrada sutil */
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Sección Carta Animal Crossing === */
+.letter-section {
+  padding: 3rem 1rem;
+  font-family: zilla slab, serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.letter-wrapper {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.mailbox-img {
+  width: 240px;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.letter-content {
+  flex: 1;
+  background-color: #fff;
+  border: 2px dashed #d4a85f;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+}
+
+.letter-content h2 {
+  font-size: 2rem;
+  color: #5c3613;
+  margin-bottom: 1rem;
+}
+
+.letter-content p {
+  color: #6b4c2e;
+  margin-bottom: 1.5rem;
+  font-family: libre Franklin, sans-serif;
+}
+
+.letter-form input,
+.letter-form textarea {
+  width: 100%;
+  padding-bottom: 50px;
+  margin-bottom: 1rem;
+  border: 2px solid #ffde88;
+  border-radius: 8px;
+  font-family: libre Franklin, sans-serif;
+  resize: none;
+}
+
+.letter-form button {
+  background-color: #ffe25f;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 40px;
+  font-weight: bold;
+  font-family: 'Fredoka', sans-serif;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 0 #cba938;
+}
+
+.letter-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 222, 89, 0.4);
+}
+
+.letter-sent-msg {
+  display: none;
+  margin-top: 1rem;
+  color: #4a3b1a;
+  font-weight: 600;
+  animation: fly-msg 1s ease forwards;
+}
+
+@keyframes fly-msg {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.letter-decor {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-top: -50px;
+  z-index: 1;
+}
+
+.decor-left,
+.decor-right {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  max-width: 2000px;
+}
+
+@keyframes float-gentle {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes sway-gentle {
+
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+.decor-left {
+  left: 0;
+  animation: float-gentle 2s ease-in-out infinite;
+}
+
+.decor-right {
+  top: -60px;
+  right: 0;
+  animation: sway-gentle 2s ease-in-out infinite;
+}
+
+.decor-left:hover {
+  animation: bounce-left 0.6s ease;
+}
+
+.decor-right:hover {
+  animation: bounce-right 0.6s ease;
+}
+
+@keyframes bounce-left {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+
+  30% {
+    transform: translateY(-10px) scale(1.05);
+  }
+
+  60% {
+    transform: translateY(5px) scale(0.97);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounce-right {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  30% {
+    transform: rotate(3deg) scale(1.05);
+  }
+
+  60% {
+    transform: rotate(-2deg) scale(0.97);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+
