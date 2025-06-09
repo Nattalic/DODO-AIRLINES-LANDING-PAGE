@@ -1623,7 +1623,7 @@ nav img {
 
 .moving-clouds-section {
   position: relative;
-  height: 1000px; /* Ajusta según necesites */
+  height: 2000px; /* Ajusta según necesites */
   overflow: hidden;
   z-index: 1;
 }
