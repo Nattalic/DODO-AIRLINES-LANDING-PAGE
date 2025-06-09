@@ -1623,7 +1623,7 @@ nav img {
 
 .moving-clouds-section {
   position: relative;
-  height: 1000px; /* Ajusta según necesites */
+  height: 2000px; /* Ajusta según necesites */
   overflow: hidden;
   z-index: 1;
 }
@@ -1671,7 +1671,7 @@ nav img {
   justify-content: space-between;
   max-width: 1200px;
   margin-top: 500px;
-  margin-left: 200px;
+  margin-left: 150px;
   gap: 2rem;
 }
 
