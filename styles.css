@@ -1369,8 +1369,8 @@ nav img {
 }
 
 .testimonial-heading img {
-  max-width: 2000px;
-  margin-left: -400px;
+  max-width: 1900px;
+  margin-left: -310px;
   display: inline-block;
   animation: triangle-wave 4s ease-in-out infinite;
   transform-origin: center;
@@ -1397,7 +1397,7 @@ nav img {
 
 .testimonial-banner {
   margin-top: 60px;
-  margin-left: 130px;
+  margin-left: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1408,20 +1408,17 @@ nav img {
   max-width: 300px;
   height: auto;
   display: block;
+  animation: floaty 4s ease-in-out infinite;
 }
-
-/* animación de entrada sutil */
-@keyframes fade-up {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0px);
   }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform: translateY(-10px);
   }
 }
+
 
 /* === Sección Carta Animal Crossing === */
 .letter-section {
