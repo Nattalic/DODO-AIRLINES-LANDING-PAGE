@@ -1,3 +1,18 @@
+@media (max-width: 1024px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-content {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+
+
 body {
   margin-left: 0px;
   margin-right: 2px;
