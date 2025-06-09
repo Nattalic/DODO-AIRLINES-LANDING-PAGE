@@ -1624,7 +1624,7 @@ nav img {
 
 .moving-clouds-section {
   position: relative;
-  height: 1100px; /* Ajusta según necesites */
+  height: 1257px; /* Ajusta según necesites */
   overflow: hidden;
   z-index: 1;
 }
@@ -1659,7 +1659,7 @@ nav img {
 }
 
 .dodo-footer {
-  margin-top: 100px;
+  margin-top: 150px;
   position: relative;
   z-index: 3;
   color: #ffffff;
