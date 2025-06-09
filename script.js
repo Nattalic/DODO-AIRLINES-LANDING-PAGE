@@ -71,3 +71,15 @@ document.querySelector(".letter-form").addEventListener("submit", function(e) {
     this.reset();
   }, 3000);
 });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  document.querySelectorAll(".fade-in-scroll").forEach((el) => {
+    observer.observe(el);
+  });
