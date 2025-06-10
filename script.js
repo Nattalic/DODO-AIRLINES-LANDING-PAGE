@@ -7,7 +7,6 @@ const scenes = [
 
 let currentIndex = 0;
 
-// Cargar la primera imagen correctamente al cargar la página
 window.onload = () => {
   document.getElementById('scene-image').src = scenes[currentIndex];
 };
@@ -15,14 +14,12 @@ window.onload = () => {
 async function changeScene(direction) {
   const img = document.getElementById('scene-image');
 
-  // Quitar animaciones previas
   img.classList.remove('fade-in', 'fade-out');
   img.classList.add('fade-out');
 
   // Esperar la salida
   await new Promise(resolve => setTimeout(resolve, 400));
 
-  // Cambiar índice con bucle circular
   currentIndex += direction;
 
   if (currentIndex < 0) {
@@ -33,10 +30,10 @@ async function changeScene(direction) {
     currentIndex = 0;
   }
 
-  // Actualizar imagen
+
   img.src = scenes[currentIndex];
 
-  // Aplicar animación de entrada
+
   img.classList.remove('fade-out');
   img.classList.add('fade-in');
 }
