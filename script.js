@@ -17,7 +17,6 @@ async function changeScene(direction) {
   img.classList.remove('fade-in', 'fade-out');
   img.classList.add('fade-out');
 
-  // Esperar la salida
   await new Promise(resolve => setTimeout(resolve, 400));
 
   currentIndex += direction;
