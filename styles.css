@@ -56,10 +56,10 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: url('./images/Group\ 95.png');
-  /* tu imagen */
+
   background-repeat: repeat-x;
   background-size: cover;
-  /* o "contain" si prefieres no recortar */
+
   animation: scrollBackground 15s linear infinite;
   z-index: -1;
 }
@@ -133,7 +133,7 @@ nav a {
   /* necesario para el ::after */
 }
 
-/* Línea suave debajo */
+
 nav a::after {
   content: '';
   position: absolute;
@@ -148,7 +148,7 @@ nav a::after {
   border-radius: 2px;
 }
 
-/* Hover con luz + aumento + cambio de color */
+
 nav a:hover {
   transform: scale(1.5);
   color: #ffe66d;
@@ -164,7 +164,7 @@ nav img {
   border-radius: 50%;
 }
 
-/* HERO LAYOUT INTERNO */
+
 .hero-content {
   display: flex;
   flex-direction: column-reverse;
@@ -327,7 +327,7 @@ nav img {
   gap: 0.5rem;
   overflow: hidden;
 
-  /* Bordes más orgánicos, tipo parche */
+ 
   border-radius: 100px;
 
   /* Transición general */
@@ -351,13 +351,13 @@ nav img {
   transform: scale(1);
 }
 
-/* Efecto de levantar un poco el botón */
+
 .ac-button:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 0 #cba938, 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Flecha animada */
+
 .ac-button .arrow1 {
   transition: transform 0.3s ease;
 }
@@ -578,7 +578,7 @@ nav img {
   }
 }
 
-/* Posiciones específicas */
+
 .tom-nook {
   bottom: 100px;
   left: 80px;
@@ -824,7 +824,7 @@ nav img {
   filter: brightness(1) contrast(1);
 }
 
-/* 🎏 Peces/burbujas animadas */
+/* burbujas animadas */
 .fisherman::before,
 .fisherman::after {
   content: '';
@@ -944,7 +944,7 @@ nav img {
   color: #543c24;
 }
 
-/* 🎉 BOTÓN ANIMADO dentro de la card */
+
 .fish-card button {
   background-color: #542c10;
   color: white;
